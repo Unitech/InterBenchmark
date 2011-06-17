@@ -1,0 +1,21 @@
+
+set terminal png
+set output "out.png"
+
+set grid
+
+set label "blog.hemca.com" at graph 0.02, 0.06
+
+set xlabel "response time (ms)"
+set ylabel "request"
+
+set size 1.0, 0.7
+plot \ 
+   "out-node.dat" using 9 smooth sbezier with lines title "node"\ 
+"out-webpy.dat" using 9 smooth sbezier with lines title "webpy"\ 
+"out-web2py.dat" using 9 smooth sbezier with lines title "web2py"\ 
+"out-php.dat" using 9 smooth sbezier with lines title "php"\ 
+"out-django.dat" using 9 smooth sbezier with lines title "django"\ 
+"out-symfony.dat" using 9 smooth sbezier with lines title "symfony"\ 
+"out-ruby.dat" using 9 smooth sbezier with lines title "ruby"\ 
+"out-express.dat" using 9 smooth sbezier with lines title "express"
